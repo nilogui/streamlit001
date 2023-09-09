@@ -48,7 +48,7 @@ dataframe = pd.DataFrame(
 
 st.dataframe(dataframe.style.highlight_max(axis=0))
 
-st.write("last One:")
+st.write("Last One:")
 dataframe = pd.DataFrame(
     np.random.randn(10, 20),
     columns=('col %d' % i for i in range(20)))
