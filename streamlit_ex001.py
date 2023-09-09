@@ -25,3 +25,10 @@ st.write("Ola, ", nome)
 # ax.scatter([1, 2, 3], [1, 2, 3])
 # ... other plotting actions ...
 # st.pyplot(fig)
+
+import pandas as pd
+
+st.write("Here's our first attempt at using data to create a table:")
+st.write(pd.DataFrame({
+    'first column': [1, 2, 3, 4],
+    'second column': [10, 20, 30, 40]
