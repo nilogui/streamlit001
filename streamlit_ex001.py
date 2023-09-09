@@ -21,7 +21,7 @@ import matplotlib.pyplot as plt
 # plt.plot([1, 2, 3, 4])
 # st.pyplot()
 
-fig, ax = plt.subplots()
-ax.scatter([1, 2, 3], [1, 2, 3])
+# fig, ax = plt.subplots()
+# ax.scatter([1, 2, 3], [1, 2, 3])
 # ... other plotting actions ...
-st.pyplot(fig)
+# st.pyplot(fig)
