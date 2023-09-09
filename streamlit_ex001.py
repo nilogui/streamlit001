@@ -17,7 +17,7 @@ nome = st.text_input("Qual e o seu nome?")
 st.write("Ola, ", nome)
 
 # Adicionar um grafico
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 # plt.plot([1, 2, 3, 4])
 # st.pyplot()
 
