@@ -26,6 +26,7 @@ st.write("Ola, ", nome)
 # ... other plotting actions ...
 # st.pyplot(fig)
 
+# https://docs.streamlit.io/library/get-started/main-concepts
 import pandas as pd
 
 st.write("Here's our first attempt at using data to create a table:")
