@@ -4,3 +4,4 @@ numpy==1.25.2
 pandas==2.1.0
 plotly==5.16.1
 streamlit==1.26.0
+vega_datasets==0.9.0
