@@ -124,9 +124,7 @@ with tab2:
     st.plotly_chart(fig, theme=None, use_container_width=True)
 
 
-import plotly.express as px
-import streamlit as st
-
+# ---------------
 st.subheader("Define a custom colorscale")
 df = px.data.iris()
 fig = px.scatter(
