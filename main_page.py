@@ -124,7 +124,6 @@ with tab2:
     st.plotly_chart(fig, theme=None, use_container_width=True)
 
 
-# ---------------
 st.subheader("Define a custom colorscale")
 df = px.data.iris()
 fig = px.scatter(
@@ -140,3 +139,18 @@ with tab1:
     st.plotly_chart(fig, theme="streamlit", use_container_width=True)
 with tab2:
     st.plotly_chart(fig, theme=None, use_container_width=True)
+
+
+from bokeh.plotting import figure
+
+x = [1, 2, 3, 4, 5]
+y = [6, 7, 2, 4, 5]
+
+p = figure(
+    title='simple line example',
+    x_axis_label='x',
+    y_axis_label='y')
+
+p.line(x, y, legend_label='Trend', line_width=2)
+
+st.bokeh_chart(p, use_container_width=True)
