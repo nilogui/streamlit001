@@ -32,12 +32,7 @@ c = alt.Chart(chart_data).mark_circle().encode(
 st.altair_chart(c, use_container_width=True)
 
 
-
-
-import streamlit as st
-import pandas as pd
-import numpy as np
-
+# https://docs.streamlit.io/library/api-reference/charts/st.vega_lite_chart
 chart_data = pd.DataFrame(
     np.random.randn(200, 3),
     columns=['a', 'b', 'c'])
