@@ -36,9 +36,6 @@ st.altair_chart(c, use_container_width=True)
 
 
 
-import altair as alt
-import pandas as pd
-import numpy as np
 
 np.random.seed(42)
 source = pd.DataFrame(
