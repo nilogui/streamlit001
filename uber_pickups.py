@@ -34,7 +34,7 @@ st.bar_chart(hist_values) # Streamlit supports more complex charting libraries l
 # st.subheader('Map of all pickups')
 # st.map(data)
 
-hour_to_filter = st.slider('hour', 0, 23, 2)  # min: 0h, max: 23h, default: 17h # hour_to_filter = 17           
+hour_to_filter = st.slider('hour', 0, 23, 3)  # min: 0h, max: 23h, default: 17h # hour_to_filter = 17           
 filtered_data = data[data[DATE_COLUMN].dt.hour == hour_to_filter]
 st.subheader(f'Map of all pickups at {hour_to_filter}:00')
 st.map(filtered_data)
