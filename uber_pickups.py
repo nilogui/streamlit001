@@ -19,8 +19,7 @@ def load_data(nrows):
 # Create a text element and let the reader know the data is loading.
 data_load_state = st.text('Loading data...')
 # Load 10,000 rows of data into the dataframe.
-data = load_data(10000)
-# Notify the reader that the data was successfully loaded.
+data = load_data(10000)# Notify the reader that the data was successfully loaded.
 data_load_state.text("Done! (using st.cache_data)")
 
 st.subheader('Raw data')
@@ -34,7 +33,7 @@ st.bar_chart(hist_values) # Streamlit supports more complex charting libraries l
 # st.subheader('Map of all pickups')
 # st.map(data)
 
-hour_to_filter = st.slider('hour', 0, 23, 17)  # min: 0h, max: 23h, default: 17h # hour_to_filter = 17           
+hour_to_filter = st.slider('hour', 0, 23, 1)  # min: 0h, max: 23h, default: 17h # hour_to_filter = 17           
 filtered_data = data[data[DATE_COLUMN].dt.hour == hour_to_filter]
 st.subheader(f'Map of all pickups at {hour_to_filter}:00')
 st.map(filtered_data)
