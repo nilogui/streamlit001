@@ -1,3 +1,4 @@
+# https://docs.streamlit.io/library/api-reference/charts
 import streamlit as st
 
 st.markdown("# Main page 🎈")
@@ -18,6 +19,14 @@ st.bar_chart(
     y='col2',
     color='col3'
 )
+
+import matplotlib.pyplot as plt
+# https://docs.streamlit.io/library/api-reference/charts/st.pyplot
+arr = np.random.normal(1, 1, size=100)
+fig, ax = plt.subplots()
+ax.hist(arr, bins=20)
+
+st.pyplot(fig)
 
 # https://docs.streamlit.io/library/api-reference/charts/st.altair_chart
 import altair as alt
