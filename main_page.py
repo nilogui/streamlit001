@@ -20,23 +20,19 @@ st.bar_chart(
 )
 
 
+
+
+
 import altair as alt
-from vega_datasets import data
 
-source = data.cars()
+chart_data = pd.DataFrame(
+    np.random.randn(20, 3),
+    columns=['a', 'b', 'c'])
 
-chart = alt.Chart(source).mark_circle().encode(
-    x='Horsepower',
-    y='Miles_per_Gallon',
-    color='Origin',
-).interactive()
+c = alt.Chart(chart_data).mark_circle().encode(
+    x='a', y='b', size='c', color='c', tooltip=['a', 'b', 'c'])
 
-tab1, tab2 = st.tabs(["Streamlit theme (default)", "Altair native theme"])
+st.altair_chart(c, use_container_width=True)
 
-with tab1:
-    # Use the Streamlit theme.
-    # This is the default. So you can also omit the theme argument.
-    st.altair_chart(chart, theme="streamlit", use_container_width=True)
-with tab2:
-    # Use the native Altair theme.
-    st.altair_chart(chart, theme=None, use_container_width=True)
+
+
